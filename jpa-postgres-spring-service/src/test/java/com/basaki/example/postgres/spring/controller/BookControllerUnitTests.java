@@ -101,7 +101,6 @@ public class BookControllerUnitTests {
         assertNotNull(actual);
         assertEquals(expected.getId(), actual.getId());
         assertEquals(expected.getTitle(), actual.getTitle());
-        assertEquals(expected.getGenre(), actual.getGenre());
         assertEquals(expected.getAuthor(), actual.getAuthor());
     }
 
