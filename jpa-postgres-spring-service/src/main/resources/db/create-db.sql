@@ -30,3 +30,20 @@ CREATE TABLE example.books
 WITH (OIDS = FALSE);
 
 ALTER TABLE example.books OWNER to owner_example;
+
+-- Table: example.categoria
+
+-- DROP TABLE example.categoria;
+
+CREATE TABLE example.categoria
+(
+    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+    nombre character varying(50) COLLATE pg_catalog."default",
+    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+)
+WITH (
+    OIDS = FALSE
+)
+TABLESPACE pg_default;
+
+ALTER TABLE example.books OWNER to owner_example;
