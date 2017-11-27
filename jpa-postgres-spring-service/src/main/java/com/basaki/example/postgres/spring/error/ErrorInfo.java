@@ -26,4 +26,20 @@ public class ErrorInfo {
     private String type;
 
     private String message;
+
+    public void setMessage(String message) {
+        this.message = message;
+    }
+
+    public void setPath(String path) {
+        this.path = path;
+    }
+
+    public void setCode(int code) {
+        this.code = code;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
