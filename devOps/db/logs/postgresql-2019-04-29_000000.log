@@ -1,0 +1,267 @@
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.price does not exist at character 105
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.price as price4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  column productent0_.sku does not exist at character 140
+STATEMENT:  select productent0_.id as id1_2_, productent0_.moneda as moneda2_2_, productent0_.nombre as nombre3_2_, productent0_.precio as precio4_2_, productent0_.sku as sku5_2_ from public.products productent0_
+ERROR:  insert or update on table "order_product" violates foreign key constraint "order_product_product_id_fkey"
+DETAIL:  Key (product_id)=(5) is not present in table "products".
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  column "amgettuple" does not exist at character 77
+STATEMENT:  SELECT oid, amname FROM pg_am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple) ORDER BY amname
+ERROR:  insert or update on table "order_product" violates foreign key constraint "order_product_product_id_fkey"
+DETAIL:  Key (product_id)=(2) is not present in table "products".
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  column "amgettuple" does not exist at character 77
+STATEMENT:  SELECT oid, amname FROM pg_am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple) ORDER BY amname
+ERROR:  syntax error at or near "AND" at character 49
+STATEMENT:  SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcdefault ORDER BY 1
+ERROR:  syntax error at or near "AND" at character 49
+STATEMENT:  SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcdefault ORDER BY 1
+ERROR:  duplicate key value violates unique constraint "order_product_product_id_order_id_key"
+DETAIL:  Key (product_id, order_id)=(1, 1) already exists.
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  duplicate key value violates unique constraint "order_product_product_id_order_id_key"
+DETAIL:  Key (product_id, order_id)=(1, 1) already exists.
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  insert or update on table "order_product" violates foreign key constraint "order_product_product_id_fkey"
+DETAIL:  Key (product_id)=(2) is not present in table "products".
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  insert or update on table "order_product" violates foreign key constraint "order_product_product_id_fkey"
+DETAIL:  Key (product_id)=(2) is not present in table "products".
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+ERROR:  insert or update on table "order_product" violates foreign key constraint "order_product_product_id_fkey"
+DETAIL:  Key (product_id)=(2) is not present in table "products".
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection timed out
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer
+ERROR:  column orderprodu0_.currency does not exist at character 35
+STATEMENT:  select orderprodu0_.id as id1_2_, orderprodu0_.currency as currency2_2_, orderprodu0_.order_id as order_id3_2_, orderprodu0_.product_entity_id as product_5_2_, orderprodu0_.product_id as product_4_2_ from public.order_product orderprodu0_ where orderprodu0_.product_id=$1 and orderprodu0_.order_id=$2
+ERROR:  column orderprodu0_.product_entity_id does not exist at character 74
+STATEMENT:  select orderprodu0_.id as id1_2_, orderprodu0_.order_id as order_id2_2_, orderprodu0_.product_entity_id as product_4_2_, orderprodu0_.product_id as product_3_2_ from public.order_product orderprodu0_ where orderprodu0_.product_id=$1 and orderprodu0_.order_id=$2
+ERROR:  null value in column "product_id" violates not-null constraint
+DETAIL:  Failing row contains (26, null, 1).
+STATEMENT:  insert into public.order_product (order_id, product_id, id) values ($1, $2, $3)
+LOG:  could not receive data from client: Connection reset by peer
+LOG:  could not receive data from client: Connection reset by peer

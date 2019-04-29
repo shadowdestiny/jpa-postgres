@@ -1,0 +1,321 @@
+LOG:  database system was shut down at 2019-04-28 20:36:28 UTC
+LOG:  MultiXact member wraparound protections are now enabled
+LOG:  autovacuum launcher started
+LOG:  database system is ready to accept connections
+ERROR:  column "amgettuple" does not exist at character 77
+STATEMENT:  SELECT oid, amname FROM pg_am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple) ORDER BY amname
+ERROR:  syntax error at or near "AND" at character 49
+STATEMENT:  SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcdefault ORDER BY 1
+ERROR:  column "amgettuple" does not exist at character 77
+STATEMENT:  SELECT oid, amname FROM pg_am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple) ORDER BY amname
+ERROR:  syntax error at or near "AND" at character 49
+STATEMENT:  SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcdefault ORDER BY 1
+ERROR:  column "amgettuple" does not exist at character 77
+STATEMENT:  SELECT oid, amname FROM pg_am WHERE EXISTS (SELECT 1 FROM pg_proc WHERE oid=amgettuple) ORDER BY amname
+ERROR:  syntax error at or near "AND" at character 49
+STATEMENT:  SELECT opcname FROM pg_opclass WHERE opcmethod= AND NOT opcdefault ORDER BY 1
+ERROR:  schema "example" does not exist
+STATEMENT:  GRANT ALL ON SCHEMA example TO owner_example;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO owner_example;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to owner_example;
+ERROR:  schema "example" does not exist
+STATEMENT:  GRANT ALL ON SCHEMA example TO owner_example;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO owner_example;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to owner_example;
+ERROR:  role "owner_example" does not exist
+STATEMENT:  GRANT owner_example TO postgres;
+	
+	CREATE SCHEMA example AUTHORIZATION owner_example;
+	
+	GRANT ALL ON SCHEMA example TO owner_example;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO owner_example;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+ERROR:  role "owner_example" does not exist
+STATEMENT:  GRANT owner_example TO postgres;
+ERROR:  relation "example.categoria_id_seq" does not exist
+STATEMENT:  CREATE ROLE owner_example WITH
+	NOLOGIN
+	NOSUPERUSER
+	INHERIT
+	NOCREATEDB
+	NOCREATEROLE
+	NOREPLICATION;
+	
+	GRANT owner_example TO postgres;
+	
+	CREATE SCHEMA example AUTHORIZATION owner_example;
+	
+	GRANT ALL ON SCHEMA example TO owner_example;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO owner_example;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+ERROR:  relation "example.categoria_id_seq" does not exist
+STATEMENT:  DROP SCHEMA IF EXISTS example CASCADE;
+	
+	DROP ROLE IF EXISTS owner_example;
+	
+	CREATE ROLE owner_example WITH
+	NOLOGIN
+	NOSUPERUSER
+	INHERIT
+	NOCREATEDB
+	NOCREATEROLE
+	NOREPLICATION;
+	
+	GRANT owner_example TO postgres;
+	
+	CREATE SCHEMA example AUTHORIZATION owner_example;
+	
+	GRANT ALL ON SCHEMA example TO owner_example;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO owner_example;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to owner_example;
+	
+ERROR:  cannot drop schema example because other objects depend on it
+DETAIL:  type example.genre depends on schema example
+	table example.books depends on schema example
+	table example.categoria depends on schema example
+HINT:  Use DROP ... CASCADE to drop the dependent objects too.
+STATEMENT:  DROP SCHEMA example
+ERROR:  relation "example.categoria_id_seq" does not exist
+STATEMENT:  
+	
+	CREATE SCHEMA example AUTHORIZATION postgres;
+	
+	GRANT ALL ON SCHEMA example TO postgres;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO postgres;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to postgres;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint NOT NULL DEFAULT nextval('example.categoria_id_seq'::regclass),
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to postgres;
+	
+ERROR:  syntax error at or near "serial" at character 557
+STATEMENT:  
+	
+	CREATE SCHEMA example AUTHORIZATION postgres;
+	
+	GRANT ALL ON SCHEMA example TO postgres;
+	
+	CREATE TYPE example.genre AS ENUM ('DRAMA', 'ROMANCE', 'GUIDE', 'TRAVEL');
+	
+	ALTER TYPE example.genre OWNER TO postgres;
+	
+	CREATE TABLE example.books
+	(
+	  id uuid,
+	  title text NOT NULL,
+	  author text NOT NULL,
+	  genre example.genre NOT NULL,
+	  PRIMARY KEY (id))
+	WITH (OIDS = FALSE);
+	
+	ALTER TABLE example.books OWNER to postgres;
+	
+	-- Table: example.categoria
+	
+	-- DROP TABLE example.categoria;
+	
+	CREATE TABLE example.categoria
+	(
+	    id bigint serial,
+	    nombre character varying(50) COLLATE pg_catalog."default",
+	    CONSTRAINT categoria_pkey PRIMARY KEY (id)
+	)
+	WITH (
+	    OIDS = FALSE
+	)
+	TABLESPACE pg_default;
+	
+	ALTER TABLE example.books OWNER to postgres;
+	
+ERROR:  invalid input syntax for uuid: "1" at character 54
+STATEMENT:  INSERT INTO example.books(id, title, author) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text)
+ERROR:  invalid input syntax for uuid: "1" at character 54
+STATEMENT:  INSERT INTO example.books(id, title, author) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text)
+ERROR:  invalid input syntax for uuid: "1" at character 61
+STATEMENT:  INSERT INTO example.books(id, title, author, genre) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text, 'DRAMA'::example.genre)
+ERROR:  invalid input syntax for uuid: "1" at character 61
+STATEMENT:  INSERT INTO example.books(id, title, author, genre) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text, 'DRAMA'::example.genre)
+ERROR:  invalid input syntax for uuid: "1" at character 61
+STATEMENT:  INSERT INTO example.books(id, title, author, genre) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text, 'DRAMA'::example.genre)
+ERROR:  invalid input syntax for uuid: "1" at character 61
+STATEMENT:  INSERT INTO example.books(id, title, author, genre) VALUES ('1'::uuid, 'hola'::text, 'mundo'::text, 'DRAMA'::example.genre)
+ERROR:  invalid input syntax for uuid: "A" at character 61
+STATEMENT:  INSERT INTO example.books(id, title, author, genre) VALUES ('A'::uuid, 'hola'::text, 'mundo'::text, 'DRAMA'::example.genre)

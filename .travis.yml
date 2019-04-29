@@ -7,7 +7,7 @@ before_script:
 script: mvn clean compile test
 notifications:
   email:
-    - indra.basak1@gmail.com
+    - lrm.programador@gmail.com
   on_success: change
   on_failure: always
   use_notice: true
