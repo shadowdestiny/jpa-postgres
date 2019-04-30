@@ -25,7 +25,6 @@ import java.util.Properties;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONObject;
-import org.json.simple.JSONArray;
 import org.json.simple.parser.ParseException;
 import org.json.simple.parser.JSONParser;
 
@@ -75,7 +74,7 @@ public class OrderProductService {
 
     private Float getCurrencyValueTransformated(String fromCurrency, Float value){
 
-        Jedis client = new Jedis("192.168.99.100",6379);
+        Jedis client = new Jedis(this.getProperty("URL_REDIS"),Integer.parseInt(this.getProperty("URL_PORT")));
         String currencyPersister = client.get("currency");
         String toCurrency = this.getProperty("DEFAULT_CURRENCY");
         String baseCurrency = this.getProperty("BASE_CURRENCY");
@@ -90,7 +89,6 @@ public class OrderProductService {
             client.expire("currency", 3600);
 
             currencyPersister = result;
-
         }
 
         JSONParser parser = new JSONParser();

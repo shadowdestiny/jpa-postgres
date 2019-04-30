@@ -33,7 +33,7 @@ services:
       target: base
     image: maven:3.5-jdk-8
     ports:
-      - 8080:8080
+      - ${PORT_APPLICATION}:8080
     networks:
       backend:
         ipv4_address: ${EM_DOCKER_JAVA_IP}

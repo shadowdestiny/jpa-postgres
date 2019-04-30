@@ -32,7 +32,8 @@ public class OrderProductController {
 
     public static final String OrderProduct_URL = "/OrderProducts";
 
-    public static final String OrderProduct_BY_ID_URL = OrderProduct_URL + "/{order_id}//{product_id}";
+    public static final String OrderProduct_BY_ID_URL = OrderProduct_URL + "/{order_id}/{product_id}";
+    public static final String OrderProduct_BY_ID_URL_ONE = OrderProduct_URL + "/{order_id}";
 
 
     @Autowired
@@ -56,11 +57,11 @@ public class OrderProductController {
     @ApiOperation(
             value = "Retrieves all OrderProducts associated with a title, author, category or combination of them.",
             response = OrderProduct.class, responseContainer = "List")
-    @RequestMapping(method = RequestMethod.GET, value = OrderProduct_URL,
+    @RequestMapping(method = RequestMethod.GET, value = OrderProduct_BY_ID_URL_ONE,
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ResponseBody
     public List<OrderProduct> read(
-            @PathVariable("orderId") Integer orderId
+            @PathVariable("order_id") Integer orderId
     ){
             return service.read(orderId);
     }

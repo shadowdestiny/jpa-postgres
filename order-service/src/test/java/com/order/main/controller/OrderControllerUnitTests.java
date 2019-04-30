@@ -1,10 +1,8 @@
 package com.order.main.controller;
 
-import com.order.main.service.BookService;
 import com.order.main.service.OrderService;
 import com.order.model.Order;
 import com.order.model.OrderRequest;
-import com.order.model.Genre;
 import org.junit.Before;
 import org.junit.Test;
 import org.mockito.InjectMocks;
@@ -13,7 +11,6 @@ import org.mockito.MockitoAnnotations;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.UUID;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
