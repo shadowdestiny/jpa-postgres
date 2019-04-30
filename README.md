@@ -1,39 +1,43 @@
+# Instalación
+
+## Instalar docker
+1. Descargar [Docker](https://docs.docker.com/docker-for-windows/install/)
+2. Descargar [Docker Compose](https://docs.docker.com/v17.09/compose/install/#install-compose)
+
+## Git
+1. Descargar [Git](https://git-scm.com/downloads)
+2. Descargar [Tortoise Git](https://tortoisegit.org/)
+
+## Editor de base de datos PGADMIN
+Descargar [PGADMIN3](https://www.pgadmin.org/download/pgadmin-3-windows/) es un archivo zip, mi recomendacion es que instales la version 3, es mas rápida.
+
+# Poniendo a funcionar nuestro entorno
+Una vez terminado los pasos anteriores debemos ir al la raíz de nustro proyecto y clonar el archivo *.env.example*
+Una vez clonado debemos ejecutar los siguientes comando de docker: 
+1. ``docker-compose build`` Realiza las configuraciones al entorno de trabajo
+2. ``docker-compose run java mvn build`` Permite instalar las dependencias de maven
+3. ``docker-compose up --build`` Construye el resto de las configuraciones como migraciones de bases de datos y corridas procesos automáticos
+4. Si has instalado el contenedor de docker en 
+    - windows 10 home, entonces deberas entrar a la siguiente direccion: http://192.168.99.100:8080/
+    - windows 10 pro hyper-v deberas ir a la direccion http://localhost:8080
+    - linux en las direcciones ips que se encuentran en el archivo .env http://121.9.9.3 sin puerto o con el puerto 8080
+
+
+Listo! ya tu entorno esta accesible desde la URL
+
 [![Build Status][travis-badge]][travis-badge-url]
 
 ![](./img/postgres.png)
 
-Documentacion original de
-https://github.com/indrabasak/jpa-postgres-sprin
-
-JPA PostgreSQL Spring Service Example
-=========================================
-This is a [**Spring Boot**](https://projects.spring.io/spring-boot/) based microservice example backed by
-[**PostgreSQL**](https://www.postgresql.org/) database. This examples shows the following:
-* Use `spring.datasource` properties and Spring Data auto configuration.
-* How to use JPA's `CrudRepository`
-* How to insert `UUID` field in Postgres database and generate `UUID `index.
-* How to convert Java `Enum` to Postgres `Enum` type.
-* How to use `Dozer` Java Bean mapper.
-
-### PostgreSQL Assumptions
-* You have a PostgreSQL database server running on your `localhost` and in port `5432`.
-* You have a database named `postgres` running on the server
-* The server has a user named `postgres` with password `postgres`.
-* If any of the assumptions doesn't hold true, change the `spring.datasource` properties in the `application.yml` file.
-
-### Create Database Entities
-Execute the `create-db.sql` script under `resources` directory on your PostgreSQL server either using  PostgreSQL administration and management tools, [pgAdmin](https://www.pgadmin.org/), 
-or from the PostgreSQL interactive terminal program, called `psql`.
 
 ### Build
-Execute the following command from the parent directory:
+Ejecutar el siguiente comando en la raiz del directorio:
 ```
 mvn clean install
 ```
 
-### Start the Service
-The main entry point `jpa-postgres-spring` example is `com.basaki.example.postgres.boot.BookApplication` class.
-You can start the application from an IDE by starting the `BookApplication` class.
+### Iniciando el servicio
+
 ```
 
   .   ____          _            __ _ _
@@ -48,25 +52,25 @@ You can start the application from an IDE by starting the `BookApplication` clas
 2017-03-08 21:50:17.992  INFO 62548 --- [           main] c.b.e.p.spring.boot.BookApplication      : Started BookApplication in 7.152 seconds (JVM running for 7.566)
 
 ```
-The application starts up at port `8080`.
+La aplicacion se inicia en el puerto `8080`.
 
 ### Accessing Swagger 
-On your browser, navigate to `http://localhost:8080/` to view the Swagger. 
+Puedes colocar en el navegador la siguiente ruta `http://localhost:8080/` para luego ver el Swagger. 
 ![](./img/book-swagger.png)
 
-Click the `Show/Hide` link to view all the operations exposed by Book API.
+Click en el `Show/Hide` podras ver los endpoint ya configurados para hacer pruebas.
 
 #### POST Example
-Once expanded, create a new Book entry by clicking `POST` and entering the following JSON snippet in the `request` field and click `Try it out!`. 
-![](./img/book-post-req.png)
 
-Here is the response you get back. Please notice the book title and the author gets captitalized before insertion.
+Una vez expandido, cree una nueva entrada de libro haciendo clic en "POST" e ingresando el siguiente fragmento de código JSON en el campo `solicitud` y haga clic en` ¡test! `.![](./img/book-post-req.png)
+
+Aquí está la respuesta que recibes. Tenga en cuenta el título del libro y el autor se cautiva antes de la inserción.
 ![](./img/book-post-rsp.png)
 
 #### GET Example
-To view all books, click `GET` and entry either `title`, `author`, `genre` or any combination of them and click lick `Try it out!`. 
-The `title` and `author` parameters are case insensitive. 
-Here is the response you get back:
+Para ver todos los registros, haga clic en `GET` e ingrese ya sea` title`, `author`,` genre` o cualquier combinación o campo de ellos y haga clic en lick `¡Test!`.
+Los parámetros `title` y` author` son insensibles a mayúsculas y minúsculas.
+Aquí está la respuesta que recibes.
 ![](./img/book-get-rsp.png)
 
 [travis-badge]: https://travis-ci.org/indrabasak/jpa-postgres-spring.svg?branch=master

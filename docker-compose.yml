@@ -26,6 +26,24 @@ services:
       postgres -c config_file=/etc/postgresql.conf
       -c logging_collector=on -c log_destination=stderr -c log_directory=/logs
 
+  java:
+    build:
+      context: devOps/java
+      dockerfile: Dockerfile
+      target: base
+    image: maven:3.5-jdk-8
+    ports:
+      - 8080:8080
+    networks:
+      backend:
+        ipv4_address: ${EM_DOCKER_JAVA_IP}
+    volumes:
+      - $HOME/.m2:/root/.m2
+      - ./:/app
+    working_dir: /app
+    command: >
+      java -jar ./order-service/target/com-order-service-1.0.jar
+
   redis:
     build:
       context: devOps/redis
@@ -46,6 +64,7 @@ volumes:
   postgres-data:
   app:
   redis-persistence:
+  maven-repository:
 
 networks:
   backend:
